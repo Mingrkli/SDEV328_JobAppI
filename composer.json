@@ -1,0 +1,13 @@
+{
+  "name": "SDEV328_JobAppI",
+  "description": "Job App",
+  "authors": [
+    {
+      "name": "Ming",
+      "email": "Mingrkli@gmail.com"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
