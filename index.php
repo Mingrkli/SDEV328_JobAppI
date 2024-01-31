@@ -16,7 +16,48 @@
     // Define a default route
     $f3 -> route('GET /', function() {
         $view = new Template();
-        echo $view -> render('views/home.tml');
+        echo $view -> render('views/home.html');
+    });
+
+    // Define a breakfast route
+    $f3 -> route('GET /breakfast', function() {
+        // echo "Breakfast";
+
+        $view = new Template();
+        echo $view -> render('views/breakfast-menu.html');
+    });
+
+    // Define a order route
+    $f3 -> route('GET|POST /order1', function($f3) {
+        // echo "Order Form Part I";
+
+        // If the form has been posted
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            // Validate the data
+            $food = $_POST['food'];
+            $meal = $_POST['meal'];
+
+            // Put the data in the session array
+            $f3 -> set ('SESSION.food', $food);
+            $f3 -> set('SESSION.meal', $meal);
+
+            // Redirect to order2 route
+            $f3 -> reroute('summary'); // This is using GET
+        }
+
+
+
+        $view = new Template();
+        echo $view -> render('views/order-form-1.html');
+    });
+
+    // Define a summary route
+    $f3 -> route ('GET /summary', function () {
+       // echo "Thank you for your order!";
+
+        // Display a view page
+        $view = new Template();
+        echo $view -> render('views/order-summary.html');
     });
 
     // Run fat-free

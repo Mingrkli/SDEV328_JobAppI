@@ -108,6 +108,8 @@
     .job-post section aside {
         grid-column-start: 1;
         grid-column-end: 3;
+
+        padding-right: 0;
     }
 
     .job-post section input[type="submit"] {
