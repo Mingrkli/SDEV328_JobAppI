@@ -1,0 +1,164 @@
+body.f-col {
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper {
+    padding: 0.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    border-bottom: 1px solid grey;
+}
+
+/* nav
+=========================================================================== */
+nav {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+    width: 100dvw;
+}
+
+nav div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 60rem) {
+    nav input[type="submit"] {
+        display: none;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav div {
+        align-items: center;
+    }
+}
+
+/* form / Main
+=========================================================================== */
+form > * {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+form.oneCol > * {
+    grid-template-columns: 1fr;
+}
+
+main > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    margin: 1rem 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    display: block;
+
+    padding: 0.3rem 0.5rem;
+    width: 100%;
+
+    font-size: 1rem;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border: 1px solid gray;
+    outline: none;
+    box-shadow: 0 0 3px gray;
+}
+
+.grid-whole-row {
+    grid-column: 1/3;
+}
+
+textarea {
+    display: block;
+    height: 10rem;
+
+    font-size: 1rem;
+
+    resize: vertical;
+}
+
+/* radio */
+.radioContainer {
+    display: flex;
+}
+
+.radioContainer input {
+    width: 2rem;
+}
+
+.radioContainer input:focus,
+.checkListContainer input:focus {
+    border: none;
+    box-shadow: none;
+}
+
+/* checkList */
+.checkListContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkList {
+    display: flex;
+    gap: 1rem;
+}
+
+.checkList input {
+    width: 10px;
+    aspect-ratio: 1/1;
+}
+
+/* List Submit */
+#list-submit input {
+    grid-column: 2/3;
+}
+
+/* Aside
+=========================================================================== */
+aside {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+aside p {
+    padding: 1rem;
+
+    border-radius: 5px;
+    background: lightgray;
+}
+
+aside p span {
+    font-weight: bold;
+}
+
+main input[type="submit"],
+aside input[type="submit"] {
+    padding: 0.5rem 0.3rem;
+
+    color: white;
+    background: rgb(86, 170, 34);
+}

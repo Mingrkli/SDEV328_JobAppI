@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Personal Information</title>
+        <link rel="stylesheet" href="./styles/styles.css" />
+        <link rel="stylesheet" href="./styles/form-apply.css">
+    </head>
+
+    <body class="f-col">
+        <nav>
+            <div>
+                <a href="./home">AppCompany LLC</a>
+                <a href="./home">Software Development Internship</a>
+                <p>Seattle Washington, Paid, 12 weeks</p>
+            </div>
+        </nav>
+
+        <div class="wrapper">
+            <h1>Personal Information</h1>
+
+            <form action="#" method="post">
+                <div>
+                    <main>
+                        <div>
+                            <div>
+                                <label>First Name</label>
+                                <input
+                                        type="text"
+                                        name="firstName"
+                                        placeholder="Sarah"
+                                />
+                            </div>
+                            <div>
+                                <label>Last Name</label>
+                                <input
+                                        type="text"
+                                        name="lastName"
+                                        placeholder="Smith"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="grid-whole-row">
+                                <label>Email</label>
+                                <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="my_email@gmail.com"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <label>State</label>
+                                <select name="state">
+                                    <option value="California">
+                                        California
+                                    </option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Washington" selected>
+                                        Washington
+                                    </option>
+                                </select>
+                            </div>
+                            <div>
+                                <label>Phone</label>
+                                <input
+                                        type="text"
+                                        name="phone"
+                                        placeholder="222-333-4444"
+                                />
+                            </div>
+                        </div>
+                    </main>
+
+                    <aside>
+                        <p>
+                            <span>Note:</span> All information entered is
+                            protected by our
+                            <span>privacy policy.</span> Profile information can
+                            only be viewed by others with your permission.
+                        </p>
+                        <input type="submit" value="Next >" />
+                    </aside>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

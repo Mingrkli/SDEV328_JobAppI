@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Information</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/form-apply.css">
+</head>
+
+<body class="f-col">
+    <nav>
+        <div>
+            <a href="./home">AppCompany LLC</a>
+            <a href="./home">Software Development Internship</a>
+            <p>Seattle Washington, Paid, 12 weeks</p>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <h1>Experience</h1>
+
+        <form action="#" method="post">
+            <div>
+                <main>
+                    <div>
+                        <div class="grid-whole-row">
+                            <label>Biography</label>
+                            <textarea
+                                    name="textBox"
+                                    placeholder="Text here..."
+                            ></textarea>
+                        </div>
+                    </div>
+                </main>
+
+                <aside>
+                    <div>
+                        <div>
+                            <label>Github Link</label>
+                            <input
+                                    type="text"
+                                    name="gitHubLink"
+                                    placeholder="github.com/my_github"
+                            />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <label>Years Experience</label>
+
+                            <div class="radioContainer">
+                                <input
+                                        type="radio"
+                                        name="yearsExperience"
+                                        value="0-2"
+                                />
+                                <label>0-2</label>
+
+                                <input
+                                        type="radio"
+                                        name="yearsExperience"
+                                        value="2-4"
+                                />
+                                <label>2-4</label>
+
+                                <input
+                                        type="radio"
+                                        name="yearsExperience"
+                                        value="4+"
+                                />
+                                <label>4+</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <label>Willing To Relocate</label>
+
+                            <div class="radioContainer">
+                                <input
+                                        type="radio"
+                                        name="willingToRelocate"
+                                        value="yes"
+                                />
+                                <label>Yes</label>
+
+                                <input
+                                        type="radio"
+                                        name="willingToRelocate"
+                                        value="no"
+                                />
+                                <label>No</label>
+
+                                <input
+                                        type="radio"
+                                        name="willingToRelocate"
+                                        value="maybe"
+                                />
+                                <label>Maybe</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Next >" />
+                </aside>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <p>Name: {{ @SESSION.firstName }} {{ @SESSION.lastName }}</p>
+            <p>Email: {{ @SESSION.email }}</p>
+            <p>State: {{ @SESSION.state }}</p>
+            <p>Phone: {{ @SESSION.phone }}</p>
+            <p>Github Link: {{ @SESSION.gitHubLink }}</p>
+            <p>Experience: {{ @SESSION.yearsExperience }}</p>
+            <p>Willing To Relocate: {{ @SESSION.willingToRelocate }}</p>
+            <p>Mailing Lists: {{ @SESSION.softwareJobs }}, {{ @SESSION.industryVerticals }}</p>
+
+            <div>
+                <h1>Summary</h1>
+                <p>{{ @SESSION.textBox }}</p>
+            </div>
+
+            <form action="#" method="post">
+                <input type="button" value="Submit My Appllication!">
+            </form>
+        </div>
+    </body>
+</html>

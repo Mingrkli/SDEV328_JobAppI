@@ -29,3 +29,8 @@ h2 {
 h1 {
     font-size: 1.5rem;
 }
+
+input[type="submit"],
+button {
+    cursor: pointer;
+}
