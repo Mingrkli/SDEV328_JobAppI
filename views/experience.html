@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Personal Information</title>
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="./styles/form-apply.css">
-</head>
+<include href="views/header.html">
 
 <body class="f-col">
     <nav>
@@ -50,26 +43,15 @@
                             <label>Years Experience</label>
 
                             <div class="radioContainer">
-                                <input
-                                        type="radio"
-                                        name="yearsExperience"
-                                        value="0-2"
-                                />
-                                <label>0-2</label>
-
-                                <input
-                                        type="radio"
-                                        name="yearsExperience"
-                                        value="2-4"
-                                />
-                                <label>2-4</label>
-
-                                <input
-                                        type="radio"
-                                        name="yearsExperience"
-                                        value="4+"
-                                />
-                                <label>4+</label>
+                                <repeat group="{{ @experiences }}" key="{{ @id }}" value="{{ @experience }}">
+                                    <input
+                                            type="radio"
+                                            id="{{ @id }}"
+                                            name="yearsExperience"
+                                            value="{{ @experience }}"
+                                    />
+                                    <label for="{{ @id }}">{{ @experience }}</label>
+                                </repeat>
                             </div>
                         </div>
                     </div>

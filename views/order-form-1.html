@@ -26,6 +26,9 @@
                         <input class="form-control" type="text" name="food" id="food" value="">
 
                         <!-- Display an error if there is one -->
+                        <check if="{{ isset(@errors['food']) }}">
+                            <span class="err">{{ @errors['food'] }}</span>
+                        </check>
                     </div>
                 </div>
                 <br>
@@ -35,38 +38,24 @@
                     <label class="col-sm-4 control-label">Select a meal</label>
                     <div class="col-sm-4">
                         <p>You chose </p>
-                        <label><input type="radio"
-                                      name="meal"
-                                      id="breakfast"
-                                      value="breakfast"
-                        > Breakfast
-                            </input>
-                        </label><br>
-                        <label><input type="radio"
-                                      name="meal"
-                                      id="brunch"
-                                      value="brunch"
-                        > Brunch
-                            </input>
-                        </label><br>
-                        <label><input type="radio"
-                                      name="meal"
-                                      id="lunch"
-                                      value="lunch"
-                        > Lunch
-                            </input>
-                        </label><br>
-                        <label><input type="radio"
-                                      name="meal"
-                                      id="dinner"
-                                      value="dinner"
-                        > Dinner
-                            </input>
-                        </label><br>
-
-                        <!-- Display an error if there is one -->
-
+                        <!-- value="{{ @meal }}, @meal can be any name you want :D -->
+                        <repeat group="{{ @meals }}" value="{{ @meal }}">
+                            <label>
+                                <!-- ucwords() makes it so that 1st character is upper case :D -->
+                                <input type="radio"
+                                          name="meal"
+                                          id="{{ @meal }}"
+                                          value="{{ @meal }}"
+                                > {{ ucwords(@meal) }}
+                                </input>
+                            </label><br>
+                        </repeat>
                     </div>
+
+                    <!-- Display an error if there is one -->
+                    <check if="{{ isset(@errors['meal']) }}">
+                        <span class="err">{{ @errors['meal'] }}</span>
+                    </check>
                 </div>
 
                 <div class="col-xs-1 ">
